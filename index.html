@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="grid.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main role="main">
+        <div class="grid-container">
+          <div class="quiz-app-container">
+            <div class="quiz-app-header js-quiz-app-header" role="banner">
+              <div class="grid-row">
+                <div class="grid-col-12">
+                  <h1 style="font-weight:300;">Web Development Quiz</h1>
+                </div>
+              </div>
+              
+              <div class="quiz-app-header-user-progress js-quiz-app-header-user-progress">
+                <div class="grid-row">
+                  <div class="grid-col-4">
+                    <div class="quiz-app-correct-count">
+                      <i class="fa fa-check" aria-hidden="true"></i><span class="js-quiz-app-correct-count"></span>
+                    </div>
+                  </div>
+                  <div class="grid-col-4">
+                    <div class="quiz-app-progress-count js-quiz-app-progress-count"></div>
+                  </div>
+                  <div class="grid-col-4">
+                    <div class="quiz-app-wrong-count">
+                      <i class="fa fa-times" aria-hidden="true"></i><span class="js-quiz-app-wrong-count"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="quiz-app-progress-bar js-quiz-app-progress-bar">
+                <div class="grid-row">
+                  <div class="grid-col-12"></div>
+                </div>
+            </div>
+            
+            <div class="quiz-app-body">
+              <div class="grid-row">
+                <div class="grid-col-12">
+                  <div class="quiz-app-body-content">
+                    
+                    <!-- Start Dialog Start -->
+                    <div class="quiz-app-start-screen js-quiz-app-start-screen">
+                      <p>Click Start to begin...</p>
+                      <div class="quiz-app-button-container js-quiz-app-start-button-container quiz-app-start-button">
+                        <button>Start</button>
+                      </div>
+                      <div class="quiz-app-start-screen-icons">
+                        <i class="devicon-html5-plain-wordmark colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-css3-plain-wordmark colored"></i>
+                      </div>
+                    </div>
+                    <!-- Start Dialog End -->
+                    
+                    <!-- Result Dialog Start -->
+                    <div class="quiz-app-result-screen js-quiz-app-result-screen">
+                      <p class="quiz-app-result-screen-text js-quiz-app-result-screen-text">Great job! That was correct!</p>
+                      <div class="quiz-app-result-screen-icons">
+                        <i class="fa fa-check" aria-hidden="true" ></i>
+                        <i class="fa fa-times" aria-hidden="true" ></i>
+                      </div>
+                      <div class="js-quiz-app-result-right-answer"></div>
+                      <div class="quiz-app-button-container js-quiz-app-result-button-container quiz-app-result-button">
+                        <button>Continue</button>
+                      </div>
+                    </div>
+                    <!-- Result Dialog End -->
+                    
+                    <!-- Summary Start  -->
+                    <div class="quiz-app-summary-container js-quiz-app-summary-container">
+                      <h3 style="font-weight:300;">Quiz Summary</h3>
+                      <div class="js-quiz-app-summary-list quiz-app-summary-list">
+                      </div>
+                      <div class="quiz-app-button-container js-quiz-app-retake-button-container quiz-app-retake-button">
+                        <button>Reset</button>
+                      </div>
+                    </div>
+                    <!-- Summary End -->
+                    
+                    <!-- Question Answer Area Start -->
+                    <section class="quiz-app-question-answer-container js-quiz-app-question-answer-container">
+                      <h3 class="quiz-app-question js-quiz-app-question" style="font-weight:300;"></h3>
+                        <label class="quiz-app-answer-option js-quiz-app-answer-option" for="answer-option-1" required>
+                          <input type="radio" id="answer-option-1" name="answer" value="Answer 1" required>
+                          <span >Answer 1</span>
+                        </label>
+                        
+                        <label class="quiz-app-answer-option js-quiz-app-answer-option" for="answer-option-2">
+                          <input type="radio" id="answer-option-2" name="answer" value="Answer 2" >
+                          <span > Answer 2</span>
+                        </label>
+                        
+                        <label class="quiz-app-answer-option js-quiz-app-answer-option" for="answer-option-3">
+                          <input type="radio" id="answer-option-3" name="answer" value="Answer 3" >
+                          <span > Answer 3</span>
+                        </label>
+                        
+                        <label class="quiz-app-answer-option js-quiz-app-answer-option" for="answer-option-4">
+                          <input type="radio" id="answer-option-4" name="answer" value="Answer 4" >
+                          <span > Answer 4</span>
+                        </label>
+                      
+                        <div class="quiz-app-subtopic-icon"><i class="js-quiz-app-subtopic-icon devicon-css3-plain-wordmark colored"></i></div>
+                    </section>
+                    <!-- Question Answer Area End -->
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="quiz-app-footer js-quiz-app-footer" role="navigation">
+              <div class="grid-row">
+                <div class="grid-col-4">
+                  <div class="quiz-app-button-container js-quiz-app-previous-button-container prev" >
+                    <button ><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</button>
+                  </div>
+                </div>
+                <div class="grid-col-4">
+                  <div class="quiz-app-question-number js-quiz-app-question-number">Question 1</div>
+                </div>
+               <div class="grid-col-4">
+                 <div class="quiz-app-button-container js-quiz-app-next-button-container">
+                   <button type="submit">Next <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                  </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
